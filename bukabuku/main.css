@@ -1,0 +1,177 @@
+*{
+	padding: 0;
+	margin: 0;
+	color: #000000;
+	text-decoration: none;
+	font-family: "Kanit";
+}
+body{
+	background-image: linear-gradient(#50B9D0, white);
+	background-repeat: no-repeat;
+	background-size: 100% 500px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#container{
+	width: auto;
+	height: auto;
+	margin: auto;
+	/* background-color: red; */
+}
+/* Style Top Header */
+#top-header{
+	/* background-color: yellow; */
+	overflow: hidden;
+	padding: 10px;
+}
+#logoWeb{
+	padding: 10px;
+	/* background-color: red; */
+	float: left;
+}
+#top-menu {
+	float: right;
+}
+#top-menu li{
+	padding: 10px;
+	background-color: red;
+	display: inline-block;
+}
+#top-menu .donasi-btn{
+	background-color: #41C77E;
+	border-radius: 5px;
+	color: #ffffff;
+	padding: 10px;
+}
+#top-menu .donasi-btn:hover{
+	background-color: #36A066;
+}
+
+#top-menu a:hover{
+	color: #ffffff;
+}
+
+/* Main Section */
+/* N E W S  S E C T I O N */
+#news-section {
+	padding: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+#news-section img{
+	margin-right: 10px;
+	/* float: left; */
+}
+
+/* S T A T S */
+#stats-section{
+	text-align:center;
+	padding: 10px;
+}
+#stats-list{
+	width: 20%;
+	/* overflow: hidden; */
+	text-align: left;
+	background-color: red;
+	display: inline-block;
+	margin-right: 15px;
+	padding: 5px;
+}
+#stats-list i{
+	float: left;
+	padding: 5px;
+	padding-right: 10px;
+	margin: 5px;
+	border-right: 4px solid #fff;
+}
+#stats-section article{
+	padding: 10px;
+	/* background-color: red; */
+	float: left;
+}
+#stats-section article h4{
+	color: white;
+}
+
+/* Color Stats */
+#stats-section .buku-stat-color{
+	background-color: #4CB5CC;
+}
+#stats-section .donasi-stat-color{
+	background-color: #3D8437;
+}
+#stats-section .donatur-stat-color{
+	background-color: #CC4C4C;
+}
+
+/* Kategori */
+#kategori-section ul{
+	text-align: center;
+}
+#kategori-section .kategori-header{
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	border-bottom: 3px solid #aeaeae;
+}
+#kategori-section li{
+	display: inline-block;
+	margin-right: 25px;
+}
+#kategori-section .kategori-box{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+#kategori-section .color-agama{
+	background-color: #C93939;
+}
+#kategori-section .color-novel{
+	background-color: #E77130;
+}
+#kategori-section .color-filsafat{
+	background-color: #C35698;
+}
+#kategori-section .color-komik{
+	background-color: #2E9F99;
+}
+#kategori-section .color-kamus{
+	background-color: #47BE3C;
+}
+#kategori-section .color-sekolah{
+	background-color: #36A066;
+}
+#kategori-section .color-lain{
+	background-color: #343434;
+}
+#kategori-section .kategori-box img{
+	padding: 25px;
+}
+#kategori-list h4{
+	text-align: center;
+}
+
+/* Populer Buku */
+#populer-section .header-populer{
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-bottom: 5px;
+	border-bottom: 3px solid #aeaeae
+}
+#populer-list{
+	width:30%;
+	background-color:red;
+	text-align: left;
+	display: inline-block;
+}
+#populer-list .populer-box img{
+	float: left;
+}
+#populer-list .text-box footer{
+	margin-top: 3px;
+}
+#populer-list .text-box footer img{
+	float: left;
+	padding-top:2px;
+	margin-right: 5px;
+	width:100px;
+}

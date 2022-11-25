@@ -1,0 +1,128 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "bukabuku");
+
+$result = mysqli_query($conn,"SELECT * FROM library");
+?>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Buka Buku</title>
+		<link rel="stylesheet" href="../main.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://kit.fontawesome.com/4e7bddb134.js" crossorigin="anonymous"></script>
+	
+</head>
+	<body>
+		<div id="container">
+			<div id="sidebar">
+				<div id="logo-content">
+					<i id="logo-menu" class="icon icon-logo"></i>
+					<a id="openNav" onClick="openNav()" href="#">
+					<i class="icon-caret-right"></i>
+					</a>
+					 
+				</div>
+				<nav id="main-menu">
+					<ul>
+						<li>
+							<a href="../index.html">
+								<i class="fa-solid fa-house fa-lg"></i>
+								<span class="text-style">Dashboard</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa-solid fa-user fa-lg"></i>
+								<span class="text-style">Users</span>
+							</a>
+						</li>
+						<li class="active-databuku">
+							<a href="./pages/databuku.html">
+								<i class="fa-solid fa-book fa-lg"></i>
+								<span class="text-style">Data Buku</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div id="footer-menu">
+					<a href="#">
+						<i class="fa-solid fa-right-from-bracket fa-lg"></i>
+							<span class="text-style">Keluar</span>
+						</a>
+				</div>
+			</div>
+			<div id="content">
+				<header id="top-header">
+					<a id="closeNav" onClick="closeNav()" href="#">
+						<i id="icon-caret-left"></i>
+					</a>
+					<a id="top-title">Dashboard</a>
+					<div id="profil">
+						<a href="#">
+							<img src="../../imgs/profil.png">
+							<div class="profil-label">
+								<h4>Zulkarnain</h4>
+								<h5>ambarz94@live.com</h5>
+							</div>
+							
+							<i class="fa-solid fa-caret-down"></i>
+						</a>
+					</div>
+				</header>
+				<main id="full">
+				<img src="../../imgs/profil.png">
+					<table border="1" cellpadding="10" cellspacing="0">
+						<tr>
+							<th>ISBN</th>
+							<th>Judul</th>
+							<th>Penulis</th>
+							<th>Penerbit</th>
+							<th>Halaman</th>
+						</tr>
+						<?php while($row = mysqli_fetch_assoc($result)) :?>
+							
+						<tr>
+							<td><?php echo $row["isbn"] ?></td>
+							<td><?php echo $row["judul"] ?></td>
+							<td><?php echo $row["penulis"] ?></td>
+							<td><?php echo $row["penerbit"] ?></td>
+							<td><?php echo $row["halaman"] ?></td>
+						</tr>
+						<?php endwhile; ?>
+					</table>
+				</main>
+			</div>
+			
+		</div>
+		<script>
+		function openNav() {
+		  document.getElementById("sidebar").style.width = "140px";
+		  document.getElementById("content").style.marginLeft = "140px";
+		  document.getElementById("closeNav").style.display = "block";
+		  document.getElementById("openNav").style.display = "none";
+			
+		  document.getElementById("logo-menu").style.backgroundImage = "url(../imgs/logo.png)";
+		  document.getElementById("logo-menu").style.width = "59.9px";
+		  document.getElementById("logo-menu").style.height = "70px";
+		  document.getElementById("logo-content").style.paddingLeft = "40px";
+		}function closeNav() {
+		  document.getElementById("sidebar").style.width = "50px";
+		  document.getElementById("content").style.marginLeft = "50px";
+		  document.getElementById("closeNav").style.display = "none";
+		  document.getElementById("openNav").style.display = "block";
+			
+		  document.getElementById("logo-menu").style.backgroundImage = "url(../imgs/logo.png)";
+		  document.getElementById("logo-menu").style.width = "34.23px";
+		  document.getElementById("logo-menu").style.height = "40px";
+		  
+		  document.getElementById("logo-content").style.paddingLeft = "5px";
+		  document.getElementById("icon-caret-right").style.display = "block";
+
+		}
+		
+		</script>
+	</body>
+</html>
